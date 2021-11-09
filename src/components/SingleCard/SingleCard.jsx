@@ -1,14 +1,29 @@
 import React from "react";
+import CardContent from "../CardContent/CardContent";
 import styles from "./SingleCard.module.css";
 
-const SingleCard = (props) => {
+const SingleCard = ({ card, openCardId, onCardClick }) => {
+  const lineStyle =
+    openCardId === card.id ? styles.bottomLine2 : styles.bottomLine;
+
+  const setCardState = () => {
+    if (openCardId === card.id) {
+      onCardClick(null);
+    } else {
+      onCardClick(card.id);
+    }
+  };
+
   return (
-    <div className={styles.singleCard}>
-      <div className={styles.titleWrapper}>
-        <p className={styles.cardNumber}>{props.card.id}</p>
-        <h3 className={styles.cardTitle}>{props.card.title}</h3>
+    <div onClick={setCardState}>
+      <div className={styles.singleCard}>
+        <div className={styles.titleWrapper}>
+          <p className={styles.cardNumber}>{card.id}</p>
+          <h3 className={styles.cardTitle}>{card.title}</h3>
+        </div>
+        <span className={lineStyle}></span>
       </div>
-      <span className={styles.bottomLine}></span>
+      {openCardId === card.id && <CardContent content={card.content} />}
     </div>
   );
 };

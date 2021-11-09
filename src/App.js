@@ -2,9 +2,8 @@ import { useState } from "react";
 import CardList from "./components/CardList/CardList";
 import "./App.css";
 
-
 function App() {
-  const [cards] = useState([
+  const cards = [
     {
       id: 1,
       title: "Build test task",
@@ -32,10 +31,20 @@ function App() {
       title: "Receive answer",
       content: ["Receive answers", "Start your IT career"],
     },
-  ]);
+  ];
+
+  const [openCard, setOpenCard] = useState(null);
+  const handleCardOpen = (id) => {
+    setOpenCard(id);
+  };
+
   return (
     <div className="App">
-      <CardList cards={cards} />
+      <CardList
+        cards={cards}
+        openCardId={openCard}
+        onCardClick={handleCardOpen}
+      />
     </div>
   );
 }

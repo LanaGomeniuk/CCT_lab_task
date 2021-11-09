@@ -4,9 +4,7 @@
   color: #0e2a35;
   cursor: pointer;
 }
-.singleCard:hover .bottomLine{
-  width: 300px;
-}
+
 .titleWrapper {
   display: flex;
   align-items: center;
@@ -31,4 +29,8 @@
   width: 200px;
   border: 2px solid #00ADAA;
 }
-
+.bottomLine2 {
+  display: block;
+  width: 300px;
+  border: 2px solid #00ADAA;
+}
