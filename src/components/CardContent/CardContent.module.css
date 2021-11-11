@@ -1,0 +1,13 @@
+.textIcon {
+  list-style-position: inside;
+  list-style-image: url(./ratio-icon.svg);
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 10px;
+}
+
+.cardText {
+  font-size: 18px;
+  color: #0e2a35;
+  margin-left: 15px;
+}

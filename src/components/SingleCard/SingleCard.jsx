@@ -4,8 +4,7 @@ import styles from "./SingleCard.module.css";
 
 const SingleCard = ({ card, openCardId, onCardClick }) => {
   const lineStyle =
-    openCardId === card.id ? styles.bottomLine2 : styles.bottomLine;
-
+    openCardId === card.id ? styles.underline2 : styles.underline;
   const setCardState = () => {
     if (openCardId === card.id) {
       onCardClick(null);
@@ -13,9 +12,8 @@ const SingleCard = ({ card, openCardId, onCardClick }) => {
       onCardClick(card.id);
     }
   };
-
   return (
-    <div onClick={setCardState}>
+    <div onClick={setCardState} >
       <div className={styles.singleCard}>
         <div className={styles.titleWrapper}>
           <p className={styles.cardNumber}>{card.id}</p>

@@ -16,21 +16,22 @@
 }
 .cardNumber {
   margin-right: 36px;
-  color:  #FFFFFF;
-  background-color: #00A9A7;
+  color: #ffffff;
+  background-color: #00a9a7;
   width: 50px;
   text-align: center;
   font-size: 36px;
   align-items: center;
 }
 
-.bottomLine {
+.underline {
   display: block;
   width: 200px;
-  border: 2px solid #00ADAA;
+  border: 2px solid #00adaa;
 }
-.bottomLine2 {
+.underline2 {
   display: block;
   width: 300px;
-  border: 2px solid #00ADAA;
+  border: 2px solid #00adaa;
+  transition: all 0.3s linear;
 }
